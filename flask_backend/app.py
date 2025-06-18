@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 from groq_agent import CreditCardAgent
 from database import get_db_connection, fetch_cards
-import json
+import os
 
 app = Flask(__name__)
 agent = CreditCardAgent()
@@ -28,4 +28,5 @@ def show_recommendations():
     return render_template('recommendations.html', recommendations=recommendations)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)

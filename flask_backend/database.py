@@ -1,14 +1,14 @@
 import psycopg2
 from psycopg2.extras import RealDictCursor
+import os
 
 def get_db_connection():
-    return psycopg2.connect(
-        dbname="credit_cards",
-        user="postgres",
-        password="password",
-        host="localhost",
-        port="5432"
-    )
+    database_url = os.environ.get('DATABASE_URL')
+    if not database_url:
+        raise ValueError("DATABASE_URL environment variable not set")
+    # Replace 'postgres://' with 'postgresql://' as required by psycopg2
+    database_url = database_url.replace('postgres://', 'postgresql://')
+    return psycopg2.connect(database_url)
 
 def init_db():
     conn = get_db_connection()

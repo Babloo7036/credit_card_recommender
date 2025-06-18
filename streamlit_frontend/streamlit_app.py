@@ -1,8 +1,12 @@
 import streamlit as st
 import requests
 import json
+import os
 
 st.title("Credit Card Recommender")
+
+# Get Flask API URL from environment variable
+FLASK_API_URL = os.environ.get('FLASK_API_URL', 'http://localhost:5000')
 
 # Initialize session state
 if 'session_id' not in st.session_state:
@@ -14,7 +18,7 @@ if 'current_question' not in st.session_state:
 
 # Function to start conversation
 def start_conversation():
-    response = requests.post('http://localhost:5000/api/start_conversation', 
+    response = requests.post(f'{FLASK_API_URL}/api/start_conversation', 
                            json={'session_id': st.session_state.session_id})
     data = response.json()
     st.session_state.current_question = data['response']
@@ -22,7 +26,7 @@ def start_conversation():
 
 # Function to submit answer
 def submit_answer(answer):
-    response = requests.post('http://localhost:5000/api/answer', 
+    response = requests.post(f'{FLASK_API_URL}/api/answer', 
                            json={'session_id': st.session_state.session_id, 'answer': answer})
     data = response.json()
     st.session_state.conversation.append(('User', answer))
