@@ -1,0 +1,52 @@
+[
+    {
+        "name": "HDFC Regalia",
+        "issuer": "HDFC Bank",
+        "annual_fee": 2500,
+        "reward_type": "Travel Points",
+        "reward_rate": 4.0,
+        "eligibility_income": 50000,
+        "perks": "4 lounge visits/year, 2% cashback on dining",
+        "apply_link": "https://apply.hdfcbank.com/regalia"
+    },
+    {
+        "name": "SBI Elite",
+        "issuer": "SBI",
+        "annual_fee": 4999,
+        "reward_type": "Reward Points",
+        "reward_rate": 3.5,
+        "eligibility_income": 60000,
+        "perks": "6 lounge visits/year, 5% cashback on groceries",
+        "apply_link": "https://apply.sbi.com/elite"
+    },
+    {
+        "name": "Axis Magnus",
+        "issuer": "Axis Bank",
+        "annual_fee": 10000,
+        "reward_type": "Travel Points",
+        "reward_rate": 5.0,
+        "eligibility_income": 75000,
+        "perks": "8 lounge visits/year, 3% cashback on travel",
+        "apply_link": "https://apply.axisbank.com/magnus"
+    },
+    {
+        "name": "ICICI Sapphire",
+        "issuer": "ICICI Bank",
+        "annual_fee": 3500,
+        "reward_type": "Cashback",
+        "reward_rate": 2.5,
+        "eligibility_income": 55000,
+        "perks": "2 lounge visits/year, Amazon vouchers",
+        "apply_link": "https://apply.icicibank.com/sapphire"
+    },
+    {
+        "name": "Amex Platinum",
+        "issuer": "American Express",
+        "annual_fee": 60000,
+        "reward_type": "Reward Points",
+        "reward_rate": 6.0,
+        "eligibility_income": 100000,
+        "perks": "Unlimited lounge access, 5% cashback on dining",
+        "apply_link": "https://apply.amex.com/platinum"
+    }
+]

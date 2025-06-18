@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Card Recommendations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .card { border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; }
+        .restart-btn { margin-top: 20px; padding: 10px; background-color: #007bff; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h1>Recommended Credit Cards</h1>
+    {% for card in recommendations %}
+        <div class="card">
+            <h3>{{ card.name }}</h3>
+            <p><strong>Issuer:</strong> {{ card.issuer }}</p>
+            <p><strong>Reasons:</strong> {{ card.reasons }}</p>
+            <p><strong>Estimated Rewards:</strong> {{ card.rewards_simulation }}</p>
+        </div>
+    {% endfor %}
+    <button class="restart-btn" onclick="window.location.href='/api/start_conversation'">Restart</button>
+</body>
+</html>
