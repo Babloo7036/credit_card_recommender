@@ -1,11 +1,11 @@
 from groq import Groq
-from database import fetch_cards
+from flask_backend.database import fetch_cards
 import json
 import os
 
 class CreditCardAgent:
     def __init__(self):
-        self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        self.client = Groq(api_key=os.environ.get('GROQ_API_KEY'))
         self.user_data = {}
         self.questions = [
             "What is your approximate monthly income (in INR)?",

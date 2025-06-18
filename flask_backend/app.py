@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
-from groq_agent import CreditCardAgent
-from database import get_db_connection, fetch_cards
+from flask_backend.groq_agent import CreditCardAgent
+from flask_backend.database import get_db_connection, fetch_cards
 import os
 
 app = Flask(__name__)
