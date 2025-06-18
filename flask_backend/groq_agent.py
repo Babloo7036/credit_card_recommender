@@ -1,5 +1,5 @@
 from groq import Groq
-from flask_backend.database import fetch_cards
+from database import fetch_cards
 import json
 import os
 
